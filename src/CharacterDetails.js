@@ -3,8 +3,6 @@ import './CharacterDetails.css';
 import {
     ApolloClient,
     InMemoryCache,
-    ApolloProvider,
-    useQuery,
     gql
   } from "@apollo/client";
 
@@ -139,7 +137,7 @@ export default class CharacterDetails extends Component {
                                                 <h6 className="mb-0">Type</h6>
                                             </div>
                                             <div className="col-sm-9 text-secondary">
-                                                {this.state.characterInfo.type == "" ? "None" : this.state.characterInfo.type1}
+                                                {this.state.characterInfo.type === "" ? "None" : this.state.characterInfo.type1}
                                             </div>
                                         </div>
                                         <hr/>

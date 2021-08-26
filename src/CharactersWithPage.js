@@ -17,12 +17,13 @@ const client = new ApolloClient({
 });
 
 
-export default class PlanetGaia extends Component {
+export default class CharacterWithPage extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            characters : []
+            characters:[],
+            pageNum: props.match.params.pageNum
         }
     }
 
@@ -33,7 +34,7 @@ export default class PlanetGaia extends Component {
         client.query({
             query: gql`
                 query {
-                    characters {
+                    characters(page:${this.state.pageNum}) {
                         results {
                             id
                             name
@@ -49,9 +50,6 @@ export default class PlanetGaia extends Component {
                 characters : result.data.characters.results
             });
         });
-    
-        
-        console.log(this.state.characters)
     }
     
 
@@ -62,7 +60,7 @@ export default class PlanetGaia extends Component {
             <div>
                 <div className="characters">
                     {characterArray.map(character=>(
-                        <Character key={character.id} id={character.id} name={character.name} image={character.image} type={character.type}  />
+                        <Character key={character.id} id={character.id} name={character.name} image={character.image}  />
                     ))}
                 </div>
                 
