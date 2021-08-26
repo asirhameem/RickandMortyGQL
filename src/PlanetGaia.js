@@ -8,6 +8,9 @@ import {
     gql
   } from "@apollo/client";
 import Character from './Character';
+import { Route, Switch } from 'react-router-dom';
+import CharacterDetails from './CharacterDetails';
+
   
 
 
@@ -28,7 +31,7 @@ export default class PlanetGaia extends Component {
 
     async componentDidMount(){
         
-        client.query({
+        await client.query({
             query: gql`
                 query {
                     characters {
@@ -55,11 +58,14 @@ export default class PlanetGaia extends Component {
     render() {
         let characterArray = this.state.characters;
         return (
-            <div className="characters">
-                {characterArray.map(character=>(
-                    <Character key={character.id} name={character.name} image={character.image} type={character.type}  />
-                ))}
-            </div>
+            <>
+                <div className="characters">
+                    {characterArray.map(character=>(
+                        <Character key={character.id} id={character.id} name={character.name} image={character.image} type={character.type}  />
+                    ))}
+                </div>
+                
+            </>
         )
     }
 }
