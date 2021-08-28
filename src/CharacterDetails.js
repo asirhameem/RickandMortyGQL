@@ -56,8 +56,6 @@ export default class CharacterDetails extends Component {
                 characterOrigin : result.data.charactersByIds["0"].origin,
                 characterEpisodes : result.data.charactersByIds["0"].episode
             });
-            // console.log(characterName);
-            // console.log(result.data.charactersByIds[0].location.name);
             console.log(this.state.characterInfo, this.state.characterLocation);
         });
         
@@ -170,7 +168,7 @@ export default class CharacterDetails extends Component {
                                                 </div>
                                             
                                                 <div className="col-sm-9 text-secondary">
-                                                    Name: {episode.name}, Air Date : {episode.air_date} 
+                                                     Name: {episode.name}, Air Date : {episode.air_date} 
                                                 </div>
                                                 <hr/>
                                             </div>    
