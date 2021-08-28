@@ -8,7 +8,7 @@ export default function Navbar() {
            <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                 <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                     <ul className="navbar-nav mr-auto">
-                        
+                        <li>Location</li>
                     </ul>
                 </div>
                 <div className="mx-auto order-0">
@@ -17,9 +17,10 @@ export default function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
+
                 <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
                     <ul className="navbar-nav ml-auto">
-                        
+                        <li>Location</li>
                     </ul>
                 </div>
             </nav>

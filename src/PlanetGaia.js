@@ -1,20 +1,13 @@
 import React, { Component } from 'react'
 import './Gaia.css'
-import {
-    ApolloClient,
-    InMemoryCache,
-    gql
-  } from "@apollo/client";
+import { gql } from "@apollo/client";
 import Character from './Character';
-
+import Client from './Client'
 
   
 
 
-const client = new ApolloClient({
-    uri: 'https://rickandmortyapi.com/graphql',
-    cache: new InMemoryCache()
-});
+
 
 
 export default class PlanetGaia extends Component {
@@ -30,7 +23,7 @@ export default class PlanetGaia extends Component {
 
     componentDidMount(){
     
-        client.query({
+        Client.query({
             query: gql`
                 query {
                     characters {

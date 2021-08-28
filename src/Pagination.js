@@ -1,15 +1,8 @@
 import React, { Component } from 'react'
-import {
-    ApolloClient,
-    InMemoryCache
-  } from "@apollo/client";
 import { Link } from 'react-router-dom';
 
 
-const client = new ApolloClient({
-    uri: 'https://rickandmortyapi.com/graphql',
-    cache: new InMemoryCache()
-});
+
 
 
 export default class Pagination extends Component {

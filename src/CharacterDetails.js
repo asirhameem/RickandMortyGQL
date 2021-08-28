@@ -1,17 +1,8 @@
 import React, { Component } from 'react'
 import './CharacterDetails.css';
-import {
-    ApolloClient,
-    InMemoryCache,
-    gql
-  } from "@apollo/client";
+import { gql } from "@apollo/client";
+import Client from './Client';
 
-
-
-const client = new ApolloClient({
-    uri: 'https://rickandmortyapi.com/graphql',
-    cache: new InMemoryCache()
-});
 
 export default class CharacterDetails extends Component {
 
@@ -26,7 +17,7 @@ export default class CharacterDetails extends Component {
     }
     componentDidMount(){
         
-        client.query({
+        Client.query({
             query: gql`
                 query{
                     charactersByIds(ids: ${this.props.match.params.id}){
