@@ -43,8 +43,6 @@ export default class PlanetGaia extends Component {
             });
         });
     
-        
-        console.log(this.state.characters)
     }
     
 
@@ -55,7 +53,7 @@ export default class PlanetGaia extends Component {
             <div>
                 <div className="characters">
                     {characterArray.map(character=>(
-                        <Character key={character.id} id={character.id} name={character.name} image={character.image} type={character.type}  />
+                        <Character key={character.id} id={character.id} name={character.name} image={character.image}  />
                     ))}
                 </div>
                 

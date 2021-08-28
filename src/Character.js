@@ -10,16 +10,13 @@ export default class Character extends Component {
                 <img src={this.props.image} className="card-img-top" alt={this.props.name}/>
                 <div className="card-body">
                     <h6 className="card-title">{this.props.name}</h6>
-                    <p className="card-text">{this.props.type}</p>
                     
                     <Link to={`/character/${this.props.id}`} className="btn btn-primary">About Me</Link>
                     
                 </div>
                 
             </div>
-
-           
-            
+ 
         )
     }
 }

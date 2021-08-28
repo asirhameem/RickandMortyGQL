@@ -1,20 +1,8 @@
 import React, { Component } from 'react'
 import './Gaia.css'
-import {
-    ApolloClient,
-    InMemoryCache,
-    gql
-  } from "@apollo/client";
+import { gql } from "@apollo/client";
 import Character from './Character';
-
-
-  
-
-
-const client = new ApolloClient({
-    uri: 'https://rickandmortyapi.com/graphql',
-    cache: new InMemoryCache()
-});
+import client from './Client';
 
 
 export default class CharacterWithPage extends Component {
@@ -50,6 +38,9 @@ export default class CharacterWithPage extends Component {
                 characters : result.data.characters.results
             });
         });
+        console.log("hello");
+    }
+    componentDidUpdate(){
     }
     
 

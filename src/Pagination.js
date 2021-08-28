@@ -29,7 +29,7 @@ export default class Pagination extends Component {
                         </li>
 
                         {pages.map(i=>(
-                            <li class="page-item"><Link to={`/${i}`} className="page-link"> {i} </Link></li>
+                            <li class="page-item"><Link to={`/page/${i}`} className="page-link"> {i} </Link></li>
                         ))}
                         
                         
