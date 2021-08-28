@@ -21,23 +21,14 @@ export default class Pagination extends Component {
         return (
             <div>
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                        </li>
+                    <ul className="pagination">
+                        
 
                         {pages.map(i=>(
-                            <li class="page-item"><Link to={`/page/${i}`} className="page-link"> {i} </Link></li>
+                            <li className="page-item"><Link to={`/page/${i}`} className="page-link"> {i} </Link></li>
                         ))}
                         
                         
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
                     </ul>
                 </nav>
                 
