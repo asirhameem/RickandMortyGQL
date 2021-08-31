@@ -40,8 +40,7 @@ export default class CharacterWithPage extends Component {
         });
         console.log("hello");
     }
-    componentDidUpdate(){
-    }
+   
     
 
     

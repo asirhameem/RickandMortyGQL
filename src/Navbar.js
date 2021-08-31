@@ -14,7 +14,6 @@ export default function Navbar() {
                     <div className="navbar-nav">
                         <Link to="/locations" className="nav-link active">Locations</Link>
                         <Link to="/episodes" className="nav-link active">Episodes</Link>
-                        {/* <Link to="/locations" className="nav-link active">Locations</Link> */}
                     </div>
                 </div>
             </nav>

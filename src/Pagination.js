@@ -14,6 +14,10 @@ export default class Pagination extends Component {
         }
     }
 
+    handlePageNum = ()=>{
+        
+    }
+
 
 
     render() {
